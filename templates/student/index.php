@@ -16,7 +16,7 @@
                 <td><?=$student['name']?></td>
                 <td><?=$student['surname']?></td>
                 <td>
-                    <button class="btn btn-primary btn-sm">Edytuj</button>
+                    <a href="index.php?route=students&action=efit&student_id=<?=$student['id']?>" class="btn btn-primary btn-sm">Edytuj</a>
                     <button class="btn btn-danger btn-sm">Usuń</button>
                 </td>
             </tr>
@@ -24,7 +24,7 @@
     </tbody>
     <tfoot>
         <tr>
-            <td colspan="3">Wszystkich uczniów: 1</td>
+            <td colspan="3">Wszystkich uczniów: <?= count($students)?></td>
             <td>
                 <a class="btn btn-success btn-sm" href="index.php?route=students&action=add">Dodaj ucznia</a>
             </td>
